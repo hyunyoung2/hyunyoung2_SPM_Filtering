@@ -1,0 +1,2 @@
+# To ingnore log directory for tensorboard in tensorflow
+log
