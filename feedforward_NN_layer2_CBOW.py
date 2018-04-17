@@ -143,7 +143,7 @@ def FeedforwardNN(input_vector, weight, biases):
 
 prediction = FeedforwardNN(input_vectors, weight, bias)
     
-cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=ground_truths, logits=prediction))
+cost = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=ground_truths, logits=prediction))
 tf.summary.scalar("Loss", cost)
 
 trainingOptimzer = tf.train.GradientDescentOptimizer(learning_rate=LEARNINGRATE).minimize(cost)
